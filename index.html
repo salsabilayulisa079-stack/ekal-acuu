@@ -1,0 +1,457 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>morning ecall acuu<3</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 30px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 550px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            color: #ff3366;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ff4f81;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* Hati Besar */
+        .heart-big {
+            font-size: 70px;
+            animation: detak 1s infinite;
+            margin-bottom: 15px;
+        }
+
+        @keyframes detak {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Tombol */
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            background-color: #ff3366;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #e91e63;
+        }
+
+        /* Pesan Rahasia */
+        #pesan {
+            display: none;
+            margin-top: 25px;
+            color: #ff3366;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1.7;
+            animation: muncul 0.8s ease;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Galeri Foto */
+        .galeri {
+            margin-top: 35px;
+        }
+
+        .galeri h2 {
+            color: #ff4f81;
+            margin-bottom: 20px;
+        }
+
+        .foto-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .foto-container img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Efek ketika foto disentuh / diarahkan */
+        .foto-container img:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 10px 25px rgba(255, 51, 102, 0.4);
+        }
+
+        /* Musik */
+        .musik {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Hati Terbang */
+        .heart {
+            position: fixed;
+            bottom: -50px;
+            font-size: 25px;
+            animation: terbang 5s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes terbang {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Tampilan HP */
+        @media (max-width: 500px) {
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .foto-container img {
+                width: 110px;
+                height: 110px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 13px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- MUSIK -->
+    <!-- ========================= -->
+
+    <audio id="musik" loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- ========================= -->
+    <!-- CONTAINER UTAMA -->
+    <!-- ========================= -->
+
+    <div class="container">
+
+        <!-- Hati Besar -->
+        <div class="heart-big">
+            ❤️
+        </div>
+
+
+        <!-- Judul -->
+        <h1>
+            MORNING CINTAKUU! 💗
+        </h1>
+
+
+        <h2>
+            may today remain cheerful!! 
+        </h2>
+
+
+        <!-- Pesan Pertama -->
+        <p>
+            ekall, THANK U FOR LOVIN MEEE
+            gue bener bener sayang sama lu, walaupun mood gue ga menentu ehehe
+        </p>
+
+
+        <!-- Pesan Kedua -->
+        <p>
+            you’re my favorite person
+            my safe place, and my home.
+            basically, i just want u. always. 🥺🤍 
+        </p>
+
+
+        <!-- Pesan Ketiga -->
+        <p>
+         i just wanna say
+         gue seneng banget bisa punya lu di hidup gue. lu bukan cuma orang yang gue sayang, 
+         tapi juga jadi tempat gue cerita, tempat gue pulang, dan my favorite person to annoy every day.
+         gue mungkin ngga selalu bisa nunjukin rasa sayang gue dengan sempurna, 
+         but please know that i really love you, more than you know. so, jangan bosen sama gue ya? 
+         stay with me for a long, long time, because honestly, i just want u. always. 🥺🤍💗
+
+        </p>
+
+
+        <!-- Tombol Love -->
+        <button onclick="iLoveYou()">
+            I LOVE U MORE AND MORE ECAL ACUU
+        </button>
+
+
+        <!-- Pesan Rahasia -->
+        <div id="pesan">
+
+            GEMES DEH AHAHAHA
+
+            <br><br>
+
+             kadang gue masih suka heran, kok bisa ya ada satu orang yang kehadirannya bikin gue senyum setiap hari.
+             thank u ya udah hadir dan jadi bagian dari hidup gue.
+             so please, jangan pergi jauh-jauh ya, 
+             karena gue udah terlalu nyaman sama lu
+             you’re my favorite person, sekarang dan semoga sampai nanti. 🫶🏻
+🤭
+
+            <br><br>
+
+            pokoknya jangan ke mana-mana, gue bakal selalu nemenin lu
+            every day, every time, whenever. anything for u sayang
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- GALERI FOTO -->
+        <!-- ========================= -->
+
+        <div class="galeri">
+
+            <h2>
+                📸 our little memories 💗
+            </h2>
+
+            <div class="foto-container">
+
+                <img src="foto1.jpg" alt="Foto kenangan 1">
+
+                <img src="foto2.jpg" alt="Foto kenangan 2">
+
+                <img src="foto3.jpg" alt="Foto kenangan 3">
+
+            </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- MUSIK -->
+        <!-- ========================= -->
+
+        <div class="musik">
+
+            🎵 Putar musik sambil baca ya 🎵
+
+        </div>
+
+
+        <!-- Tombol Musik -->
+        <button onclick="putarMusik()">
+
+            🎶 Play / Pause Music
+
+        </button>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script>
+
+        // =====================================
+        // TOMBOL I LOVE YOU
+        // =====================================
+
+        function iLoveYou() {
+
+            // Menampilkan pesan rahasia
+            document.getElementById("pesan").style.display = "block";
+
+
+            // Memulai musik
+            const musik = document.getElementById("musik");
+
+            musik.play();
+
+        }
+
+
+        // =====================================
+        // TOMBOL PLAY / PAUSE MUSIK
+        // =====================================
+
+        function putarMusik() {
+
+            const musik = document.getElementById("musik");
+
+
+            if (musik.paused) {
+
+                musik.play();
+
+            } else {
+
+                musik.pause();
+
+            }
+
+        }
+
+
+        // =====================================
+        // MEMBUAT ANIMASI HATI
+        // =====================================
+
+        function buatHati() {
+
+            // Membuat elemen div baru
+            const hati = document.createElement("div");
+
+
+            // Memberikan class heart
+            hati.classList.add("heart");
+
+
+            // Pilihan emoji hati
+            const emoji = [
+                "❤️",
+                "💗",
+                "💖",
+                "💕",
+                "💘"
+            ];
+
+
+            // Memilih emoji secara random
+            hati.innerHTML =
+                emoji[
+                    Math.floor(
+                        Math.random() * emoji.length
+                    )
+                ];
+
+
+            // Posisi horizontal random
+            hati.style.left =
+                Math.random() * 100 + "vw";
+
+
+            // Kecepatan animasi random
+            hati.style.animationDuration =
+                Math.random() * 3 + 3 + "s";
+
+
+            // Menambahkan hati ke halaman
+            document.body.appendChild(hati);
+
+
+            // Menghapus hati setelah animasi selesai
+            setTimeout(() => {
+
+                hati.remove();
+
+            }, 6000);
+
+        }
+
+
+        // =====================================
+        // MENJALANKAN ANIMASI SETIAP 500ms
+        // =====================================
+
+        setInterval(buatHati, 500);
+
+    </script>
+
+</body>
+
+</html>
